@@ -1,0 +1,44 @@
+kamalesh@Kamaleshs-MacBook-Pro showcase % aio info
+
+  System:
+    OS: macOS 13.2.1
+    CPU: (10) arm64 Apple M1 Max
+    Memory: 107.50 MB / 32.00 GB
+    Shell: 5.8.1 - /bin/zsh
+  Binaries:
+    Node: 16.18.1 - /opt/homebrew/bin/node
+    Yarn: Not Found
+    npm: 8.19.3 - /opt/homebrew/bin/npm
+  Virtualization:
+    Docker: Not Found
+  npmGlobalPackages:
+    @adobe/aio-cli: 9.1.1
+
+  Proxies:
+    http: (not set)
+    https: (not set)
+  CLI plugins:
+    core:
+      @adobe/aio-cli 9.1.1
+      @adobe/aio-cli-plugin-app-templates 1.5.1
+      @adobe/aio-cli-plugin-auth 3.1.0
+      @adobe/aio-cli-plugin-certificate 1.0.1
+      @adobe/aio-cli-plugin-config 4.0.1
+      @adobe/aio-cli-plugin-console 4.0.1
+      @adobe/aio-cli-plugin-events 2.0.2
+      @adobe/aio-cli-plugin-info 3.0.1
+      @adobe/aio-cli-plugin-runtime 6.0.1
+      @adobe/aio-cli-plugin-telemetry 1.2.0
+      @oclif/plugin-autocomplete 1.4.6
+      @oclif/plugin-help 5.2.6
+      @oclif/plugin-not-found 2.3.21
+      @oclif/plugin-plugins 2.3.2
+      @oclif/plugin-warn-if-update-available 2.0.28
+    user:
+      @adobe/aio-cli-plugin-aem 1.0.4
+      @adobe/aio-cli-plugin-aem-cloud-service-migration 1.2.4
+      @adobe/aio-cli-plugin-app 8.6.1-pre.2022-08-17.163d3a3a (*)
+      @adobe/aio-cli-plugin-cloudmanager 3.0.2
+      @adobe/aio-cli-plugin-target 1.0.1
+    link:
+      @adobe/aio-cli-plugin-aem-rde 0.0.1

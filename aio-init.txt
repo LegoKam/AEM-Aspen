@@ -1,0 +1,494 @@
+Last login: Tue Feb 28 08:59:53 on ttys005
+kamalesh@Kamaleshs-MacBook-Pro showcase % DEBUG=* aio app init 
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/package.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/oclif.manifest.json +0ms
+  config:@adobe/aio-cli using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/oclif.manifest.json +0ms
+  config reading user plugins pjson /Users/kamalesh/.local/share/@adobe/aio-cli/package.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/package.json +0ms
+  config loading plugins [
+  { name: '@adobe/aio-cli-plugin-target', tag: 'latest', type: 'user' },
+  { name: '@adobe/aio-cli-plugin-aem', tag: 'latest', type: 'user' },
+  { name: '@adobe/aio-cli-plugin-app', tag: 'next', type: 'user' },
+  {
+    name: '@adobe/aio-cli-plugin-cloudmanager',
+    tag: 'latest',
+    type: 'user'
+  },
+  {
+    name: '@adobe/aio-cli-plugin-aem-cloud-service-migration',
+    tag: 'latest',
+    type: 'user'
+  }
+] +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/package.json/package.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/package.json/package.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/package.json/package.json +0ms
+  config reading user plugin /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-target +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-target/package.json +0ms
+  config reading user plugin /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-cloudmanager +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-cloudmanager/package.json +0ms
+  config reading user plugin /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem/package.json +0ms
+  config reading user plugin /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/package.json +0ms
+  config reading user plugin /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem-cloud-service-migration +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem-cloud-service-migration/package.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-target/oclif.manifest.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem/oclif.manifest.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/oclif.manifest.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-cloudmanager/oclif.manifest.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem-cloud-service-migration/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-target using manifest from /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-target/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-app using manifest from /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-aem using manifest from /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-cloudmanager using manifest from /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-cloudmanager/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-aem-cloud-service-migration using manifest from /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem-cloud-service-migration/oclif.manifest.json +0ms
+  config loading plugins [
+  {
+    type: 'link',
+    name: '@adobe/aio-cli-plugin-aem-rde',
+    root: '/Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde'
+  }
+] +4ms
+  config loadJSON /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/package.json +0ms
+  config reading link plugin /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde +0ms
+  config loadJSON /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/package.json +0ms
+  config loadJSON /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/oclif.manifest.json +0ms
+  config loadJSON /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/.oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-aem-rde loading IDs from /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands +0ms
+  config:@adobe/aio-cli-plugin-aem-rde found commands [
+  'aem:rde:create-env',
+  'aem:rde:delete',
+  'aem:rde:history',
+  'aem:rde:install',
+  'aem:rde:reset',
+  'aem:rde:status'
+] +5ms
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+  @adobe/aio-lib-ims:context:debug guessing context type: cli
+  aio-cli-config reading config: /Users/kamalesh/.config/aio
+  aio-cli-config reading config: /Users/kamalesh/Documents/WORKSPACE/Code/simplewf/showcase/.aio
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/create-env.js +250ms
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/delete.js +1ms
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/history.js +0ms
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/install.js +0ms
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/reset.js +0ms
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/status.js +0ms
+  config loading plugins [
+  '@oclif/plugin-help',
+  '@oclif/plugin-plugins',
+  '@oclif/plugin-autocomplete',
+  '@oclif/plugin-not-found',
+  '@oclif/plugin-warn-if-update-available',
+  '@adobe/aio-cli-plugin-config',
+  '@adobe/aio-cli-plugin-console',
+  '@adobe/aio-cli-plugin-runtime',
+  '@adobe/aio-cli-plugin-app',
+  '@adobe/aio-cli-plugin-app-templates',
+  '@adobe/aio-cli-plugin-auth',
+  '@adobe/aio-cli-plugin-certificate',
+  '@adobe/aio-cli-plugin-info',
+  '@adobe/aio-cli-plugin-events',
+  '@adobe/aio-cli-plugin-telemetry'
+] +270ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-autocomplete +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-autocomplete/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-config +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-config/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-console +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-console/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-runtime +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-runtime/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app-templates +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app-templates/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-auth +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-auth/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-info +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-info/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-events +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-events/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-telemetry +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-telemetry/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-help +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-help/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-plugins +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-plugins/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-not-found +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-not-found/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-warn-if-update-available +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-warn-if-update-available/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-certificate +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-certificate/package.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-autocomplete/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-console/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app-templates/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-auth/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-events/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-info/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-runtime/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-telemetry/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-config/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-warn-if-update-available/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-not-found/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-plugins/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-certificate/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-help/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-app-templates using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app-templates/oclif.manifest.json +0ms
+  config:@oclif/plugin-autocomplete using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-autocomplete/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-telemetry using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-telemetry/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-console using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-console/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-config using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-config/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-events using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-events/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-runtime using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-runtime/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-app using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-info using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-info/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-auth using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-auth/oclif.manifest.json +0ms
+  config:@oclif/plugin-plugins using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-plugins/oclif.manifest.json +0ms
+  config:@oclif/plugin-help using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-help/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-certificate using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-certificate/oclif.manifest.json +0ms
+  config:@oclif/plugin-warn-if-update-available using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-warn-if-update-available/oclif.manifest.json +0ms
+  config:@oclif/plugin-not-found using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-not-found/oclif.manifest.json +0ms
+  config config done +15ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/package.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/oclif.manifest.json +0ms
+  config:@adobe/aio-cli using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/oclif.manifest.json +0ms
+  config reading user plugins pjson /Users/kamalesh/.local/share/@adobe/aio-cli/package.json +3ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/package.json +0ms
+  config loading plugins [
+  { name: '@adobe/aio-cli-plugin-target', tag: 'latest', type: 'user' },
+  { name: '@adobe/aio-cli-plugin-aem', tag: 'latest', type: 'user' },
+  { name: '@adobe/aio-cli-plugin-app', tag: 'next', type: 'user' },
+  {
+    name: '@adobe/aio-cli-plugin-cloudmanager',
+    tag: 'latest',
+    type: 'user'
+  },
+  {
+    name: '@adobe/aio-cli-plugin-aem-cloud-service-migration',
+    tag: 'latest',
+    type: 'user'
+  }
+] +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/package.json/package.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/package.json/package.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/package.json/package.json +0ms
+  config reading user plugin /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-target +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-target/package.json +0ms
+  config reading user plugin /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-cloudmanager +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-cloudmanager/package.json +0ms
+  config reading user plugin /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/package.json +0ms
+  config reading user plugin /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem-cloud-service-migration +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem-cloud-service-migration/package.json +0ms
+  config reading user plugin /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem/package.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/oclif.manifest.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-cloudmanager/oclif.manifest.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-target/oclif.manifest.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem-cloud-service-migration/oclif.manifest.json +0ms
+  config loadJSON /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-app using manifest from /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-target using manifest from /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-target/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-cloudmanager using manifest from /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-cloudmanager/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-aem using manifest from /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-aem-cloud-service-migration using manifest from /Users/kamalesh/.local/share/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-aem-cloud-service-migration/oclif.manifest.json +0ms
+  config loading plugins [
+  {
+    type: 'link',
+    name: '@adobe/aio-cli-plugin-aem-rde',
+    root: '/Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde'
+  }
+] +2ms
+  config loadJSON /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/package.json +0ms
+  config reading link plugin /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde +0ms
+  config loadJSON /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/package.json +0ms
+  config loadJSON /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/oclif.manifest.json +0ms
+  config loadJSON /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/.oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-aem-rde loading IDs from /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands +0ms
+  config:@adobe/aio-cli-plugin-aem-rde found commands [
+  'aem:rde:create-env',
+  'aem:rde:delete',
+  'aem:rde:history',
+  'aem:rde:install',
+  'aem:rde:reset',
+  'aem:rde:status'
+] +1ms
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/create-env.js +1ms
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/delete.js +0ms
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/history.js +0ms
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/install.js +0ms
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/reset.js +0ms
+  config:@adobe/aio-cli-plugin-aem-rde (require) /Users/kamalesh/Documents/WORKSPACE/Code/RDE-RapidDevEnv/aio-cli-plugin-aem-rde/src/commands/aem/rde/status.js +0ms
+  config loading plugins [
+  '@oclif/plugin-help',
+  '@oclif/plugin-plugins',
+  '@oclif/plugin-autocomplete',
+  '@oclif/plugin-not-found',
+  '@oclif/plugin-warn-if-update-available',
+  '@adobe/aio-cli-plugin-config',
+  '@adobe/aio-cli-plugin-console',
+  '@adobe/aio-cli-plugin-runtime',
+  '@adobe/aio-cli-plugin-app',
+  '@adobe/aio-cli-plugin-app-templates',
+  '@adobe/aio-cli-plugin-auth',
+  '@adobe/aio-cli-plugin-certificate',
+  '@adobe/aio-cli-plugin-info',
+  '@adobe/aio-cli-plugin-events',
+  '@adobe/aio-cli-plugin-telemetry'
+] +3ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-autocomplete +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-autocomplete/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-config +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-config/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-console +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-console/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-runtime +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-runtime/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app-templates +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app-templates/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-auth +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-auth/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-info +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-info/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-events +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-events/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-telemetry +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-telemetry/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-help +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-help/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-plugins +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-plugins/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-not-found +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-not-found/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-warn-if-update-available +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-warn-if-update-available/package.json +0ms
+  config reading core plugin /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-certificate +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-certificate/package.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-autocomplete/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-runtime/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-auth/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-console/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-config/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-info/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app-templates/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-events/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-help/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-plugins/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-warn-if-update-available/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-not-found/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-certificate/oclif.manifest.json +0ms
+  config loadJSON /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-telemetry/oclif.manifest.json +0ms
+  config:@oclif/plugin-autocomplete using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-autocomplete/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-runtime using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-runtime/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-auth using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-auth/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-console using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-console/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-info using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-info/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-config using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-config/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-app using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app/oclif.manifest.json +0ms
+  config:@oclif/plugin-help using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-help/oclif.manifest.json +0ms
+  config:@oclif/plugin-plugins using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-plugins/oclif.manifest.json +0ms
+  config:@oclif/plugin-not-found using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-not-found/oclif.manifest.json +0ms
+  config:@oclif/plugin-warn-if-update-available using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@oclif/plugin-warn-if-update-available/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-certificate using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-certificate/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-telemetry using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-telemetry/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-events using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-events/oclif.manifest.json +0ms
+  config:@adobe/aio-cli-plugin-app-templates using manifest from /opt/homebrew/lib/node_modules/@adobe/aio-cli/node_modules/@adobe/aio-cli-plugin-app-templates/oclif.manifest.json +0ms
+  config config done +5ms
+  config start init hook +1ms
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+  aio:@adobe/aio-cli-plugin-cloudmanager:hooks:init start
+  aio-cli-config reading config: /Users/kamalesh/.config/aio +0ms
+  aio-cli-config reading config: /Users/kamalesh/Documents/WORKSPACE/Code/simplewf/showcase/.aio +1ms
+  aio:@adobe/aio-cli-plugin-auth:hooks:init start
+  @adobe/aio-cli-plugin-auth:upgrade-config-hook:debug hook running.
+  aio-cli-config reading config: /Users/kamalesh/.config/aio
+  aio-cli-config reading config: /Users/kamalesh/Documents/WORKSPACE/Code/simplewf/showcase/.aio
+  aio:@adobe/aio-cli-plugin-console:hooks:init start
+  @adobe/aio-cli-plugin-console:upgrade-config-hook:debug hook running.
+  aio:@oclif/plugin-warn-if-update-available:hooks:init start
+  aio:@adobe/aio-cli-plugin-telemetry:hooks:init start
+  aio-telemetry:init tracking init => app:init inCI=false
+  aio:@adobe/aio-cli-plugin-cloudmanager:hooks:init done
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+  aio:@adobe/aio-cli-plugin-auth:hooks:init done
+  aio:@adobe/aio-cli-plugin-console:hooks:init done
+  aio:@adobe/aio-cli-plugin-telemetry:hooks:init done
+  aio:@adobe/aio-cli-plugin-cloudmanager:hooks:init start
+  aio:@adobe/aio-cli-plugin-cloudmanager:hooks:init done
+  aio:@oclif/plugin-warn-if-update-available:hooks:init done
+  config init hook done
+  config runCommand app:init []
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+winston:create-logger: Define prototype method for "error"
+winston:create-logger: Define prototype method for "warn"
+winston:create-logger: Define prototype method for "info"
+winston:create-logger: Define prototype method for "http"
+winston:create-logger: Define prototype method for "verbose"
+winston:create-logger: Define prototype method for "debug"
+winston:create-logger: Define prototype method for "silly"
+  config start command_error hook
+  aio:@adobe/aio-cli-plugin-telemetry:hooks:command_error start
+  aio-telemetry:error tracking command-error =>
+  aio-telemetry:telemetry-lib posting telemetry event
+  aio-telemetry:telemetry-lib response.ok = 
+  aio:@adobe/aio-cli-plugin-telemetry:hooks:command_error done
+  config command_error hook done
+    TypeError: HttpExponentialBackoff is not a constructor
