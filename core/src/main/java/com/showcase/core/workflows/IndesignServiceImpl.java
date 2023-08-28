@@ -22,6 +22,7 @@ import com.microsoft.azure.storage.blob.*;
 import com.showcase.core.beans.Params;
 import com.showcase.core.beans.Root;
 import com.showcase.core.beans.Source;
+import com.showcase.core.ccapi.CommonUtil;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.LoginException;
@@ -89,9 +90,14 @@ public class IndesignServiceImpl implements WorkflowProcess {
             String messageResponse = invokeIndesignDataMergeService(messageBody);
             String nextCallUrl = lookupJson(messageResponse, "/statusUrls/all");
 
-            Thread.sleep(15L * 1000L);
+            String statusCallResponse = null;
+            do {
+                Thread.sleep(5 * 1000);
+                statusCallResponse = invokeStatusCall(nextCallUrl);
+                log.debug("STATUS RESPONSE:::: ?????" + statusCallResponse);
+            } while (isRunning(statusCallResponse));
 
-            String statusCallResponse = invokeIndesignStatusCall(nextCallUrl);
+            statusCallResponse = invokeIndesignStatusCall(nextCallUrl);
             String outputPath = lookupJson(statusCallResponse, "/events/2/data/destination/url");
             log.debug("Final response>>>>>>>" + statusCallResponse);
             log.debug("Output Path response>>>>>>>" + outputPath);
@@ -107,6 +113,37 @@ public class IndesignServiceImpl implements WorkflowProcess {
         }
 
     }
+
+    private String invokeStatusCall(String call) throws Exception {
+
+        URL url = new URL(call);
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod(REQUEST_METHOD_GET);
+        con.setRequestProperty("accept", JSON_CONTENT_TYPE);
+        con.setRequestProperty("x-api-key", indesignServiceAPIKey);
+        con.setRequestProperty("Authorization", indesignAuthToken);
+        con.connect();
+
+        log.info("============response============");
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8))) {
+            StringBuilder response = new StringBuilder();
+            String responseLine = null;
+            while ((responseLine = br.readLine()) != null) {
+                response.append(responseLine.trim());
+            }
+            return response.toString();
+        }
+    }
+
+    public static boolean isRunning(String statusCallResponse) throws JsonProcessingException {
+
+        String status = CommonUtil.lookupJson(statusCallResponse, "/events/0/state");
+        log.debug("STATUS??? ?????? " + status);
+        if(status!=null && status.trim().length()==0) return true;
+        return (!status.equals("COMPLETED"));
+    }
+
+
 
     private void initVariables(MetaDataMap args) {
         String argumentsString = args.get(PROCESS_ARGS, "string");
