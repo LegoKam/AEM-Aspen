@@ -39,6 +39,16 @@ import java.util.stream.Collectors;
 @Component(service = WorkflowProcess.class, property = {"process.label=Photoshop Service Process"})
 public class PSDServiceImpl implements WorkflowProcess {
 
+//    Workflow process - arguments
+//    azureBlobContainer = https://blobstorage4poc.blob.core.windows.net/container2/
+//    azureConnectionString = DefaultEndpointsProtocol=https;AccountName=blobstorage4poc;AccountKey=bRvgwrBTEoBiFEJJiPaAGap/59q72P994/AzEKeu6gaqBzBEM4egds5Qv6fFx0YNOykWI3K34lki+AStmMmF2w==;EndpointSuffix=core.windows.net
+//    containerRef = container2
+//    psAuthToken = Bearer eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE2OTY5NDM5MDg5MDRfOTAxZThkYWUtMTZkOC00MTk3LTgzNDYtN2FhNDRjYzI0ZjhlX3V3MiIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiJjY2FzLXdlYl8wXzEiLCJ1c2VyX2lkIjoiQ0VDNUM3MDM1NDg5RjVBNjBBNEM5OEExQGFkb2JlLmNvbSIsInN0YXRlIjoie1wianNsaWJ2ZXJcIjpcInYyLXYwLjM4LjAtMTctZzYzMzMxOWRcIixcIm5vbmNlXCI6XCIzMjU0NTgxOTIzMzQ3MzQ5XCJ9IiwiYXMiOiJpbXMtbmExIiwiYWFfaWQiOiJDRUM1QzcwMzU0ODlGNUE2MEE0Qzk4QTFAYWRvYmUuY29tIiwiY3RwIjowLCJmZyI6IlgzR1A0STZFVlBQNU1IVU9HTVFWWVhBQVlRIiwic2lkIjoiMTY5Njk0MzkwODg5OV85ZTMxMWY4OC02MTVlLTRhZmItOWZlYS00ZDY4NzM0OTg1MDJfdXcyIiwibW9pIjoiNGNjNGZjNWUiLCJwYmEiOiJNZWRTZWNOb0VWLExvd1NlYyIsImV4cGlyZXNfaW4iOiI4NjQwMDAwMCIsInNjb3BlIjoiQWRvYmVJRCxvcGVuaWQsY3JlYXRpdmVfY2xvdWQsaW5kZXNpZ25fc2VydmljZXMiLCJjcmVhdGVkX2F0IjoiMTY5Njk0MzkwODkwNCJ9.Wm-UjeBDB7EgFgMwDCBuZPjSkAzzjt8BLP0IIn2_--vTo3RUpCh_lAZ1kIsfgwz05u-z0mL0YNsabOfQ81ErQBUjxiBHHTonphNPzVD1LFJ-rNMOCcZBDL42JjgiULncKUNTOR4sWlEnVj1sds7Uuf1dxC17vNxYeCe_4kaVkvj5cQhdyEg0umf_uZouqgtZHT_ws5d0NeC4D01R5WuzyIVs2iWhlTRsWL9oBKRFsR_BPh0JRttVu36xNUInfDxWkcSoJDa93OGVVQrzVCzFzlrdQxfN7c_XjDBfGSRekFoVcpXidRswYkNGLB8sYlcmI8i2uYFKPTnbzKXlIYMM3w
+//    psDataMergeServiceUrl = https://image.adobe.io/pie/psdService/documentOperations
+//    psServiceAPIKey = ccas-web_0_1
+//    scene7Url = https://s7ap1.scene7.com/is/image/AGS489/
+
+
 
     private static final Logger log = LoggerFactory.getLogger(PSDServiceImpl.class);
     public static final String HTTP_GET = "HTTP_GET";

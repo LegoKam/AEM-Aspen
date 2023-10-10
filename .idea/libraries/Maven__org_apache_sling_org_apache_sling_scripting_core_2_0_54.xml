@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.sling:org.apache.sling.scripting.core:2.0.54" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.apache.sling" artifactId="org.apache.sling.scripting.core" version="2.0.54" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.scripting.core/2.0.54/org.apache.sling.scripting.core-2.0.54.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.scripting.core/2.0.54/org.apache.sling.scripting.core-2.0.54-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.scripting.core/2.0.54/org.apache.sling.scripting.core-2.0.54-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

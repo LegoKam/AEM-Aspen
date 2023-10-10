@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: com.adobe.cq:aem-cloud-testing-clients:1.1.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="com.adobe.cq" artifactId="aem-cloud-testing-clients" version="1.1.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/cq/aem-cloud-testing-clients/1.1.2/aem-cloud-testing-clients-1.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/cq/aem-cloud-testing-clients/1.1.2/aem-cloud-testing-clients-1.1.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/cq/aem-cloud-testing-clients/1.1.2/aem-cloud-testing-clients-1.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

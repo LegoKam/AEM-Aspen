@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: com.adobe.aem:aem-sdk-api:2023.3.11382.20230315T073850Z-230200" type="java-imported" external-system-id="Maven">
+    <properties groupId="com.adobe.aem" artifactId="aem-sdk-api" version="2023.3.11382.20230315T073850Z-230200" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/aem/aem-sdk-api/2023.3.11382.20230315T073850Z-230200/aem-sdk-api-2023.3.11382.20230315T073850Z-230200.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/aem/aem-sdk-api/2023.3.11382.20230315T073850Z-230200/aem-sdk-api-2023.3.11382.20230315T073850Z-230200-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/aem/aem-sdk-api/2023.3.11382.20230315T073850Z-230200/aem-sdk-api-2023.3.11382.20230315T073850Z-230200-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

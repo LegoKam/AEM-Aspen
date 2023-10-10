@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: io.wcm:io.wcm.caconfig.extensions:1.8.0" type="java-imported" external-system-id="Maven">
+    <properties groupId="io.wcm" artifactId="io.wcm.caconfig.extensions" version="1.8.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/wcm/io.wcm.caconfig.extensions/1.8.0/io.wcm.caconfig.extensions-1.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/wcm/io.wcm.caconfig.extensions/1.8.0/io.wcm.caconfig.extensions-1.8.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/wcm/io.wcm.caconfig.extensions/1.8.0/io.wcm.caconfig.extensions-1.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

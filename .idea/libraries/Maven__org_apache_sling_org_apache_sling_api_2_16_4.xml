@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.sling:org.apache.sling.api:2.16.4" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.apache.sling" artifactId="org.apache.sling.api" version="2.16.4" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.api/2.16.4/org.apache.sling.api-2.16.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.api/2.16.4/org.apache.sling.api-2.16.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.api/2.16.4/org.apache.sling.api-2.16.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

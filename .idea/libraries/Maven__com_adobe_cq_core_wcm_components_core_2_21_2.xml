@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: com.adobe.cq:core.wcm.components.core:2.21.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="com.adobe.cq" artifactId="core.wcm.components.core" version="2.21.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/cq/core.wcm.components.core/2.21.2/core.wcm.components.core-2.21.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/cq/core.wcm.components.core/2.21.2/core.wcm.components.core-2.21.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/cq/core.wcm.components.core/2.21.2/core.wcm.components.core-2.21.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

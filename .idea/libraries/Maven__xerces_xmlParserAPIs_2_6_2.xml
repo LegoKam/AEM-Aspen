@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: xerces:xmlParserAPIs:2.6.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="xerces" artifactId="xmlParserAPIs" version="2.6.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

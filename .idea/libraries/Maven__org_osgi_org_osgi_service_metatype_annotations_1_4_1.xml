@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.osgi:org.osgi.service.metatype.annotations:1.4.1" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.osgi" artifactId="org.osgi.service.metatype.annotations" version="1.4.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/osgi/org.osgi.service.metatype.annotations/1.4.1/org.osgi.service.metatype.annotations-1.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/osgi/org.osgi.service.metatype.annotations/1.4.1/org.osgi.service.metatype.annotations-1.4.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/osgi/org.osgi.service.metatype.annotations/1.4.1/org.osgi.service.metatype.annotations-1.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

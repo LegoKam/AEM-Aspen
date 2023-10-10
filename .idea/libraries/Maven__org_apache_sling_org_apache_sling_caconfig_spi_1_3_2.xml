@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.sling:org.apache.sling.caconfig.spi:1.3.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.apache.sling" artifactId="org.apache.sling.caconfig.spi" version="1.3.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.caconfig.spi/1.3.2/org.apache.sling.caconfig.spi-1.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.caconfig.spi/1.3.2/org.apache.sling.caconfig.spi-1.3.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.caconfig.spi/1.3.2/org.apache.sling.caconfig.spi-1.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

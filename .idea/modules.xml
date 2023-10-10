@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/showcase.iml" filepath="$PROJECT_DIR$/showcase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/all/showcase.all.iml" filepath="$PROJECT_DIR$/all/showcase.all.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/showcase.core.iml" filepath="$PROJECT_DIR$/core/showcase.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dispatcher/showcase.dispatcher.cloud.iml" filepath="$PROJECT_DIR$/dispatcher/showcase.dispatcher.cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/it.tests/showcase.it.tests.iml" filepath="$PROJECT_DIR$/it.tests/showcase.it.tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui.apps/showcase.ui.apps.iml" filepath="$PROJECT_DIR$/ui.apps/showcase.ui.apps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui.apps.structure/showcase.ui.apps.structure.iml" filepath="$PROJECT_DIR$/ui.apps.structure/showcase.ui.apps.structure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui.config/showcase.ui.config.iml" filepath="$PROJECT_DIR$/ui.config/showcase.ui.config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui.content/showcase.ui.content.iml" filepath="$PROJECT_DIR$/ui.content/showcase.ui.content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui.frontend/showcase.ui.frontend.iml" filepath="$PROJECT_DIR$/ui.frontend/showcase.ui.frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui.tests/showcase.ui.tests.iml" filepath="$PROJECT_DIR$/ui.tests/showcase.ui.tests.iml" />
+    </modules>
+  </component>
+</project>

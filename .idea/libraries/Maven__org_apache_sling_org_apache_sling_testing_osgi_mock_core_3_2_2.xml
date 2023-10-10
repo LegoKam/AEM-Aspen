@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.sling:org.apache.sling.testing.osgi-mock.core:3.2.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.apache.sling" artifactId="org.apache.sling.testing.osgi-mock.core" version="3.2.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.testing.osgi-mock.core/3.2.2/org.apache.sling.testing.osgi-mock.core-3.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.testing.osgi-mock.core/3.2.2/org.apache.sling.testing.osgi-mock.core-3.2.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/sling/org.apache.sling.testing.osgi-mock.core/3.2.2/org.apache.sling.testing.osgi-mock.core-3.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
