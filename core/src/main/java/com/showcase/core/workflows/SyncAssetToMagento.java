@@ -6,14 +6,16 @@ import com.adobe.granite.workflow.exec.WorkItem;
 import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.day.cq.dam.api.Asset;
+import com.day.cq.dam.commons.util.PrefixRenditionPicker;
 import com.google.gson.Gson;
 import com.showcase.core.beans.magento.Content;
 import com.showcase.core.beans.magento.Entry;
 import com.showcase.core.beans.magento.Root;
+import com.showcase.core.beans.photoshop.Input;
 import com.showcase.core.util.AEMUtil;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
-import org.apache.oltu.oauth2.common.OAuth;
 import org.apache.sling.api.resource.ModifiableValueMap;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -25,10 +27,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -36,7 +35,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-@Component(service = WorkflowProcess.class, property = {"process.label=Sync Asset to Magento"})
+@Component(service = WorkflowProcess.class, property = {"process.label=Sync Asset to Magento/Commerce"})
 public class SyncAssetToMagento implements WorkflowProcess {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
@@ -121,7 +120,9 @@ public class SyncAssetToMagento implements WorkflowProcess {
 
         Gson gson = new Gson();
 
-        byte[] byteArray = asset.getRendition(assetRendition).getStream().readAllBytes();
+        InputStream inputStream = asset.getRendition(new PrefixRenditionPicker(assetRendition, true)).getStream();
+        byte[] byteArray = IOUtils.toByteArray(inputStream);
+
 
         //Root Object
         Root root = new Root();
@@ -133,7 +134,7 @@ public class SyncAssetToMagento implements WorkflowProcess {
         String magentoAssetID = null;
         if (Objects.requireNonNull(metadataNode).hasProperty("magentoAssetID")) {
             magentoAssetID = metadataNode.getProperty("magentoAssetID").getString();
-            if (magentoAssetID != null && !magentoAssetID.isBlank()) {
+            if (magentoAssetID != null && magentoAssetID.trim().length() > 0) {
                 entry.setId(Integer.parseInt(magentoAssetID));
                 call = call + "/" + magentoAssetID;
             }
@@ -144,8 +145,6 @@ public class SyncAssetToMagento implements WorkflowProcess {
         entry.setPosition(0);
         ArrayList<String> types = new ArrayList<>();
         types.add("image");
-        types.add("small_image");
-        types.add("thumbnail");
         entry.setTypes(types);
 
         // Content Object
@@ -169,8 +168,9 @@ public class SyncAssetToMagento implements WorkflowProcess {
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestProperty("Content-Type", "application/json");
         con.setRequestProperty("Authorization", bearerToken);
-        if (magentoAssetID != null && !magentoAssetID.isBlank()) {
+        if (magentoAssetID != null && magentoAssetID.trim().length() > 0) {
             con.setRequestMethod("PUT");
+            logger.debug("This is an Commerce Asset Update request.");
         }
 
         con.setDoOutput(true);

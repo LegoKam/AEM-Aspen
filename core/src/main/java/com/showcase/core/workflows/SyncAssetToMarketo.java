@@ -6,11 +6,13 @@ import com.adobe.granite.workflow.exec.WorkItem;
 import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.day.cq.dam.api.Asset;
+import com.day.cq.dam.api.Rendition;
+import com.day.cq.dam.api.RenditionPicker;
+import com.day.cq.dam.commons.util.PrefixRenditionPicker;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.showcase.core.beans.marketo.Root;
 import com.showcase.core.util.AEMUtil;
-import com.showcase.core.util.CommonUtil;
 import com.showcase.core.util.HttpPostMultipart;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.LoginException;
@@ -54,7 +56,7 @@ public class SyncAssetToMarketo implements WorkflowProcess {
     // clientSecret = J5dztVYPHk6QR81j0H5r0G6SzEkoah05
     // marketoFolder = {'id':34,'type':'Folder'}
     // marketoInstance = https://691-RNY-559.mktorest.com
-    // assetRendition = cq5dam.web.1280.1280.jpeg
+    // assetRendition = cq5dam.web.1280.1280
 
     private void initVariables(MetaDataMap args) {
         String argumentsString = args.get(PROCESS_ARGS, "string");
@@ -111,7 +113,9 @@ public class SyncAssetToMarketo implements WorkflowProcess {
 
         Map<String, String> headers = new HashMap<>();
         HttpPostMultipart multipart = null;
-        Resource assetResource = asset.getRendition(assetRendition);
+        Resource assetResource = asset.getRendition(new PrefixRenditionPicker(assetRendition, true));
+
+
         InputStream inputStream = assetResource.adaptTo(InputStream.class);
 
         multipart = new HttpPostMultipart(call, "utf-8", headers);

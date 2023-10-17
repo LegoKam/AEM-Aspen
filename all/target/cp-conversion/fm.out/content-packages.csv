@@ -1,4 +1,4 @@
-# File created on Mon Oct 16 22:02:21 AEDT 2023 by the Apache Sling Content Package to Sling Feature converter
+# File created on Wed Oct 18 05:59:14 AEDT 2023 by the Apache Sling Content Package to Sling Feature converter
 # content-package path, content-package ID, content-package type, content-package parent ID, path in parent content-package, absolute path
 /Users/kamalesh/Documents/WORKSPACE/Customers/PSI/Code/AEM-Aspen/all/target/showcase.all-1.0-SNAPSHOT.zip,com.showcase:showcase.all:1.0-SNAPSHOT,CONTAINER,,,
 /Users/kamalesh/Documents/WORKSPACE/Customers/PSI/Code/AEM-Aspen/all/target/showcase.all-1.0-SNAPSHOT.zip,com.showcase:showcase.ui.apps:1.0-SNAPSHOT,APPLICATION,com.showcase:showcase.all:1.0-SNAPSHOT,/jcr_root/apps/showcase-packages/application/install/showcase.ui.apps-1.0-SNAPSHOT.zip,/Users/kamalesh/Documents/WORKSPACE/Customers/PSI/Code/AEM-Aspen/all/target/showcase.all-1.0-SNAPSHOT.zip!/jcr_root/apps/showcase-packages/application/install/showcase.ui.apps-1.0-SNAPSHOT.zip

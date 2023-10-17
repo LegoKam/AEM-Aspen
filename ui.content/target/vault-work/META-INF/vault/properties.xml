@@ -5,7 +5,7 @@
 <entry key="allowIndexDefinitions">false</entry>
 <entry key="acHandling">merge</entry>
 <entry key="dependencies-locations">com.showcase:showcase.ui.apps:1.0-SNAPSHOT=maven:com.showcase:showcase.ui.apps:1.0-SNAPSHOT:zip</entry>
-<entry key="created">2023-10-16T11:02:19.805Z</entry>
+<entry key="created">2023-10-17T18:59:12.067Z</entry>
 <entry key="groupId">com.showcase</entry>
 <entry key="description">UI content package for AdobeDX</entry>
 <entry key="version">1.0-SNAPSHOT</entry>

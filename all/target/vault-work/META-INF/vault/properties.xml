@@ -3,7 +3,7 @@
 <properties>
 <comment>AdobeDX - All</comment>
 <entry key="allowIndexDefinitions">false</entry>
-<entry key="created">2023-10-16T11:02:20.184Z</entry>
+<entry key="created">2023-10-17T18:59:12.617Z</entry>
 <entry key="groupId">com.showcase</entry>
 <entry key="name">showcase.all</entry>
 <entry key="description">All content package for AdobeDX</entry>

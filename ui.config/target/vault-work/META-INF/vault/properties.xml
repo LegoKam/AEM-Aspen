@@ -4,7 +4,7 @@
 <comment>AdobeDX - UI config</comment>
 <entry key="cloudManagerTarget">none</entry>
 <entry key="allowIndexDefinitions">false</entry>
-<entry key="created">2023-10-16T11:02:19.990Z</entry>
+<entry key="created">2023-10-17T18:59:12.359Z</entry>
 <entry key="groupId">com.showcase</entry>
 <entry key="name">showcase.ui.config</entry>
 <entry key="description">UI config package for AdobeDX</entry>
