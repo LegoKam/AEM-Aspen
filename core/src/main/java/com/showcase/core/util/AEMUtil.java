@@ -77,7 +77,9 @@ public class AEMUtil {
 
         URL url = new URL(outputUrl);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.setConnectTimeout(500000);
+        con.setConnectTimeout(59000);
+        con.setReadTimeout(59000);
+
         con.setRequestMethod(REQUEST_METHOD_GET);
 
         con.connect();
