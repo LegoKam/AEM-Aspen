@@ -34,10 +34,7 @@ import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jcr.Binary;
-import javax.jcr.RepositoryException;
-import javax.jcr.Session;
-import javax.jcr.ValueFactory;
+import javax.jcr.*;
 import java.io.*;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
@@ -116,31 +113,33 @@ public class IndesignServiceImpl implements WorkflowProcess {
         } catch (LoginException | RepositoryException | URISyntaxException | IOException | InvalidKeyException |
                  StorageException | InterruptedException e) {
             log.error("LoginException::", e);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
         }
-
     }
 
-    private String invokeStatusCall(String call) throws Exception {
+    private String invokeStatusCall(String call) {
 
-        URL url = new URL(call);
-        HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.setRequestMethod(REQUEST_METHOD_GET);
-        con.setRequestProperty("accept", JSON_CONTENT_TYPE);
-        con.setRequestProperty("x-api-key", indesignServiceAPIKey);
-        con.setRequestProperty("Authorization", indesignAuthToken);
-        con.connect();
+        try {
+            URL url = new URL(call);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod(REQUEST_METHOD_GET);
+            con.setRequestProperty("accept", JSON_CONTENT_TYPE);
+            con.setRequestProperty("x-api-key", indesignServiceAPIKey);
+            con.setRequestProperty("Authorization", indesignAuthToken);
+            con.connect();
 
-        log.info("============response============");
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8))) {
-            StringBuilder response = new StringBuilder();
-            String responseLine = null;
-            while ((responseLine = br.readLine()) != null) {
-                response.append(responseLine.trim());
+            log.info("============response============");
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8))) {
+                StringBuilder response = new StringBuilder();
+                String responseLine = null;
+                while ((responseLine = br.readLine()) != null) {
+                    response.append(responseLine.trim());
+                }
+                return response.toString();
             }
-            return response.toString();
+        } catch (IOException e) {
+            log.error("Error", e);
         }
+        return null;
     }
 
     public static boolean isRunning(String statusCallResponse) throws JsonProcessingException {
@@ -148,7 +147,7 @@ public class IndesignServiceImpl implements WorkflowProcess {
         String status = CommonUtil.lookupJson(statusCallResponse, "/events/0/state");
         log.debug("STATUS??? ?????? " + status);
         if (status != null && status.trim().length() == 0) return true;
-        return (!status.equals("COMPLETED"));
+        return (!Objects.requireNonNull(status).equals("COMPLETED"));
     }
 
 
@@ -176,30 +175,34 @@ public class IndesignServiceImpl implements WorkflowProcess {
                 "\n--------------end - argsMap--------------");
     }
 
-    private void writeFinalAssetToDAM(ResourceResolver resourceResolver, String outputUrl, String path) throws Exception {
+    private void writeFinalAssetToDAM(ResourceResolver resourceResolver, String outputUrl, String path) {
 
-        int paramStart = outputUrl.indexOf("?");
-        String baseUrl = null;
-        if (paramStart != -1) {
-            baseUrl = outputUrl.substring(0, paramStart);
+        try {
+            int paramStart = outputUrl.indexOf("?");
+            String baseUrl = null;
+            if (paramStart != -1) {
+                baseUrl = outputUrl.substring(0, paramStart);
+            }
+
+            log.info("baseUrl::" + baseUrl);
+
+            URL url = new URL(outputUrl);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod(REQUEST_METHOD_GET);
+
+            con.connect();
+            ValueFactory factory = Objects.requireNonNull(resourceResolver.adaptTo(Session.class)).getValueFactory();
+            Binary binary = factory.createBinary(con.getInputStream());
+
+            AssetManager assetManager = resourceResolver.adaptTo(AssetManager.class);
+            if (assetManager != null) {
+                assetManager.createOrReplaceAsset(path + ".pdf", binary, "application/pdf", true);
+            }
+
+            log.info("Done!!");
+        } catch (RepositoryException | IOException e) {
+            log.error("Error:", e);
         }
-
-        log.info("baseUrl::" + baseUrl);
-
-        URL url = new URL(outputUrl);
-        HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.setRequestMethod(REQUEST_METHOD_GET);
-
-        con.connect();
-        ValueFactory factory = Objects.requireNonNull(resourceResolver.adaptTo(Session.class)).getValueFactory();
-        Binary binary = factory.createBinary(con.getInputStream());
-
-        AssetManager assetManager = resourceResolver.adaptTo(AssetManager.class);
-        if (assetManager != null) {
-            assetManager.createOrReplaceAsset(path + ".pdf", binary, "application/pdf", true);
-        }
-
-        log.info("Done!!");
 
     }
 
@@ -296,30 +299,36 @@ public class IndesignServiceImpl implements WorkflowProcess {
             return messageAsset;
 
         } catch (RepositoryException | URISyntaxException | IOException | InvalidKeyException | StorageException e) {
-            throw new RuntimeException(e);
+            log.error("Error", e);
         }
+        return null;
     }
 
-    private String invokeIndesignStatusCall(String call) throws Exception {
+    private String invokeIndesignStatusCall(String call) {
 
-        URL url = new URL(call);
-        HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.setRequestMethod(REQUEST_METHOD_GET);
-        con.setRequestProperty("accept", JSON_CONTENT_TYPE);
-        con.setRequestProperty("x-api-key", indesignServiceAPIKey);
-        con.setRequestProperty("Authorization", indesignAuthToken);
-        con.connect();
+        try {
+            URL url = new URL(call);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod(REQUEST_METHOD_GET);
+            con.setRequestProperty("accept", JSON_CONTENT_TYPE);
+            con.setRequestProperty("x-api-key", indesignServiceAPIKey);
+            con.setRequestProperty("Authorization", indesignAuthToken);
+            con.connect();
 
-        log.info("============response============");
-        try (BufferedReader br = new BufferedReader(
-                new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8))) {
-            StringBuilder response = new StringBuilder();
-            String responseLine = null;
-            while ((responseLine = br.readLine()) != null) {
-                response.append(responseLine.trim());
+            log.info("============response============");
+            try (BufferedReader br = new BufferedReader(
+                    new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8))) {
+                StringBuilder response = new StringBuilder();
+                String responseLine = null;
+                while ((responseLine = br.readLine()) != null) {
+                    response.append(responseLine.trim());
+                }
+                return response.toString();
             }
-            return response.toString();
+        } catch (IOException e) {
+            log.error("Error", e);
         }
+        return null;
     }
 
     private String invokeIndesignDataMergeService(String finalBody) throws IOException {

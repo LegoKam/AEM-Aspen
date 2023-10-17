@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<workspaceFilter version="1.0">
-    <filter root="/apps/showcase/clientlibs"/>
-    <filter root="/apps/showcase/components"/>
-    <filter root="/apps/showcase/i18n"/>
-    <filter root="/apps/sling" />
-    <filter root="/apps/msm/showcase_blueprint" mode="merge"/>
-</workspaceFilter>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.showcase.core.workflows.SyncAssetToMagento">
-  <property name="process.label" type="String" value="Sync Asset to Magento/Commerce"/>
-  <service>
-    <provide interface="com.adobe.granite.workflow.exec.WorkflowProcess"/>
-  </service>
-  <reference name="resourceResolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" field="resourceResolverFactory"/>
-  <implementation class="com.showcase.core.workflows.SyncAssetToMagento"/>
-</scr:component>

@@ -28,9 +28,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.jcr.RepositoryException;
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URISyntaxException;
-import java.net.URL;
+import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.util.*;
@@ -47,7 +45,6 @@ public class PSDServiceImpl implements WorkflowProcess {
 //    psDataMergeServiceUrl = https://image.adobe.io/pie/psdService/documentOperations
 //    psServiceAPIKey = ccas-web_0_1
 //    scene7Url = https://s7ap1.scene7.com/is/image/AGS489/
-
 
 
     private static final Logger log = LoggerFactory.getLogger(PSDServiceImpl.class);
@@ -129,10 +126,8 @@ public class PSDServiceImpl implements WorkflowProcess {
             }
 
         } catch (LoginException | RepositoryException | URISyntaxException | IOException | InvalidKeyException |
-                 StorageException e) {
+                 StorageException | InterruptedException e) {
             log.error("Exception::", e);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -284,28 +279,33 @@ public class PSDServiceImpl implements WorkflowProcess {
             return input;
 
         } catch (RepositoryException | URISyntaxException | IOException | InvalidKeyException | StorageException e) {
-            throw new RuntimeException(e);
+            log.error("error", e);
         }
+        return null;
     }
 
-    private String invokePSStatusCall(String call) throws Exception {
+    private String invokePSStatusCall(String call) {
+        try {
 
-        URL url = new URL(call);
-        HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.setRequestMethod(REQUEST_METHOD_GET);
-        con.setRequestProperty("accept", JSON_CONTENT_TYPE);
-        con.setRequestProperty("x-api-key", psServiceAPIKey);
-        con.setRequestProperty("Authorization", psAuthToken);
-        con.connect();
+            URL url = new URL(call);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod(REQUEST_METHOD_GET);
+            con.setRequestProperty("accept", JSON_CONTENT_TYPE);
+            con.setRequestProperty("x-api-key", psServiceAPIKey);
+            con.setRequestProperty("Authorization", psAuthToken);
+            con.connect();
 
-        log.info("============response============");
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8))) {
-            StringBuilder response = new StringBuilder();
-            String responseLine = null;
-            while ((responseLine = br.readLine()) != null) {
-                response.append(responseLine.trim());
+            log.info("============response============");
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8))) {
+                StringBuilder response = new StringBuilder();
+                String responseLine = null;
+                while ((responseLine = br.readLine()) != null) {
+                    response.append(responseLine.trim());
+                }
+                return response.toString();
             }
-            return response.toString();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 

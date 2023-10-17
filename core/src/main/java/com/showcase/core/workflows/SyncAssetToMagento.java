@@ -16,10 +16,7 @@ import com.showcase.core.util.AEMUtil;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
-import org.apache.sling.api.resource.ModifiableValueMap;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ResourceResolver;
-import org.apache.sling.api.resource.ResourceResolverFactory;
+import org.apache.sling.api.resource.*;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
@@ -105,8 +102,8 @@ public class SyncAssetToMagento implements WorkflowProcess {
                 resourceResolver.commit();
             }
 
-        } catch (Exception e) {
-            logger.error("Error", e);
+        } catch (LoginException | RepositoryException | IOException e) {
+            logger.debug("Error", e);
         }
 
     }
