@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 20
+Implementation-Title: AdobeDX - All
+Implementation-Version: 1.0-SNAPSHOT
+Content-Package-Type: container
+Content-Package-Id: com.showcase:showcase.all:1.0-SNAPSHOT
+Content-Package-Description: All content package for AdobeDX
+Content-Package-Roots: /apps/showcase-packages,/apps/showcase-vendor-pac
+ kages
+

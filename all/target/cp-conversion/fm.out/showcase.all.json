@@ -1,0 +1,106 @@
+{
+  "id":"com.showcase:showcase.all:slingosgifeature:1.0-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.showcase:showcase.core:1.0-SNAPSHOT",
+      "Bundle-SymbolicName":"showcase.core",
+      "Bundle-Version":"1.0.0.SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.showcase:showcase.all:1.0-SNAPSHOT"
+    },
+    {
+      "id":"io.wcm:io.wcm.caconfig.extensions:1.8.0",
+      "Bundle-SymbolicName":"io.wcm.caconfig.extensions",
+      "Bundle-Version":"1.8.0",
+      "start-order":"20",
+      "content-package-origins":"com.showcase:showcase.all:1.0-SNAPSHOT|adobe/cq60:core.wcm.components.examples.ui.config:2.21.2"
+    },
+    {
+      "id":"io.wcm:io.wcm.caconfig.editor:1.8.0-cp2fm-converted",
+      "Bundle-SymbolicName":"io.wcm.caconfig.editor",
+      "Bundle-Version":"1.8.0",
+      "start-order":"20",
+      "content-package-origins":"com.showcase:showcase.all:1.0-SNAPSHOT|adobe/cq60:core.wcm.components.examples.ui.config:2.21.2"
+    }
+  ],
+  "configurations":  {
+    "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~showcase":    {
+      "user.mapping":[
+        "showcase.core=[content-svc-admin]"
+      ],
+      ":configurator:content-package-origins":"com.showcase:showcase.all:1.0-SNAPSHOT|com.showcase:showcase.ui.config:1.0-SNAPSHOT"
+    },
+    "com.adobe.cq.wcm.core.components.internal.servlets.TableOfContentsFilter~showcase":    {
+      "enabled":"true",
+      ":configurator:content-package-origins":"com.showcase:showcase.all:1.0-SNAPSHOT|com.showcase:showcase.ui.config:1.0-SNAPSHOT"
+    },
+    "org.apache.sling.commons.log.LogManager.factory.config~showcase":    {
+      "org.apache.sling.commons.log.names":[
+        "com.showcase"
+      ],
+      "org.apache.sling.commons.log.level":"DEBUG",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"false",
+      ":configurator:content-package-origins":"com.showcase:showcase.all:1.0-SNAPSHOT|com.showcase:showcase.ui.config:1.0-SNAPSHOT"
+    },
+    "io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy":    {
+      "enabled":true,
+      ":configurator:content-package-origins":"com.showcase:showcase.all:1.0-SNAPSHOT|adobe/cq60:core.wcm.components.examples.ui.config:2.21.2"
+    }
+  },
+  "content-packages:ARTIFACTS|true":[
+    "com.showcase:showcase.ui.apps:zip:cp2fm-converted:1.0-SNAPSHOT",
+    "com.showcase:showcase.ui.config:zip:cp2fm-converted:1.0-SNAPSHOT",
+    "adobe.cq60:core.wcm.components.examples.ui.apps:zip:cp2fm-converted:2.21.2",
+    "io.wcm:io.wcm.caconfig.editor-apps:zip:cp2fm-converted:1.8.0",
+    "adobe.cq60:core.wcm.components.examples.ui.config:zip:cp2fm-converted:2.21.2",
+    "com.showcase:showcase.all:zip:cp2fm-converted:1.0-SNAPSHOT"
+  ],
+  "repoinit:TEXT|true":[
+    "# origin=com.showcase:showcase.all:1.0-SNAPSHOT|com.showcase:showcase.ui.config:1.0-SNAPSHOT source=org.apache.sling.jcr.repoinit.RepositoryInitializer~showcase",
+    "create path (sling:OrderedFolder) /content/dam/showcase",
+    "create path (nt:unstructured) /content/dam/showcase/jcr:content",
+    "set properties on /content/dam/showcase/jcr:content",
+    "  set cq:conf{String} to /conf/showcase",
+    "  set jcr:title{String} to \"AdobeDX\"",
+    "end",
+    "create service user content-svc-admin with path system/showcase",
+    "set ACL for content-svc-admin",
+    "   allow jcr:all on /content/",
+    " end",
+    "set ACL for content-svc-admin",
+    "   allow jcr:all on /conf/",
+    " end"
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.showcase.core.beans.indesign",
+        "com.showcase.core.beans.magento",
+        "com.showcase.core.beans.marketo",
+        "com.showcase.core.beans.photoshop",
+        "com.showcase.core.beans.photoshop.output",
+        "com.showcase.core.filters",
+        "com.showcase.core.listeners",
+        "com.showcase.core.models",
+        "com.showcase.core.schedulers",
+        "com.showcase.core.servlets",
+        "com.showcase.core.util",
+        "com.showcase.core.workflows",
+        "com.microsoft.azure.storage",
+        "com.microsoft.azure.storage.analytics",
+        "com.microsoft.azure.storage.blob",
+        "com.microsoft.azure.storage.core",
+        "com.microsoft.azure.storage.file",
+        "com.microsoft.azure.storage.queue",
+        "com.microsoft.azure.storage.table",
+        "io.wcm.caconfig.editor",
+        "io.wcm.caconfig.editor.model"
+      ]
+    },
+    {
+      "name":"com.adobe.aem.deprecated"
+    }
+  ]
+}

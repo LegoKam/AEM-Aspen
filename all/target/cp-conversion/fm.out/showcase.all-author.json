@@ -1,0 +1,44 @@
+{
+  "id":"com.showcase:showcase.all:slingosgifeature:author:1.0-SNAPSHOT",
+  "configurations":  {
+    "com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider~showcase":    {
+      "mobile.resourceTypes":[
+        "showcase/components/page"
+      ],
+      "README":"Indicate which page resource types should display the mobile emulators.",
+      ":configurator:content-package-origins":"com.showcase:showcase.all:1.0-SNAPSHOT|com.showcase:showcase.ui.config:1.0-SNAPSHOT"
+    },
+    "com.adobe.granite.cors.impl.CORSPolicyImpl~showcase":    {
+      "alloworigin":[
+        "http://localhost:3000"
+      ],
+      "allowedpaths":[
+        "/(content|conf)/showcase.*"
+      ],
+      "supportedheaders":[
+        "Authorization",
+        "Origin",
+        "Accept",
+        "X-Requested-With",
+        "Content-Type",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers"
+      ],
+      "supportedmethods":[
+        "GET",
+        "HEAD"
+      ],
+      "alloworiginregexp":[
+      ],
+      ":configurator:content-package-origins":"com.showcase:showcase.all:1.0-SNAPSHOT|com.showcase:showcase.ui.config:1.0-SNAPSHOT"
+    }
+  },
+  "api-regions:JSON|false":[
+    {
+      "name":"global"
+    },
+    {
+      "name":"com.adobe.aem.deprecated"
+    }
+  ]
+}

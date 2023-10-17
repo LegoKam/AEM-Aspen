@@ -6,7 +6,6 @@ import com.adobe.cq.dam.cfm.FragmentData;
 import com.adobe.granite.workflow.WorkflowException;
 import com.adobe.granite.workflow.WorkflowSession;
 import com.adobe.granite.workflow.exec.WorkItem;
-import com.adobe.granite.workflow.exec.WorkflowData;
 import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.day.cq.dam.api.Asset;
@@ -19,10 +18,11 @@ import com.google.gson.Gson;
 import com.microsoft.azure.storage.CloudStorageAccount;
 import com.microsoft.azure.storage.StorageException;
 import com.microsoft.azure.storage.blob.*;
-import com.showcase.core.beans.Params;
-import com.showcase.core.beans.Root;
-import com.showcase.core.beans.Source;
-import com.showcase.core.ccapi.CommonUtil;
+import com.showcase.core.beans.indesign.Params;
+import com.showcase.core.beans.indesign.Root;
+import com.showcase.core.beans.indesign.Source;
+import com.showcase.core.util.AEMUtil;
+import com.showcase.core.util.CommonUtil;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.LoginException;
@@ -84,8 +84,8 @@ public class IndesignServiceImpl implements WorkflowProcess {
             initVariables(map);
 
 
-            ResourceResolver resourceResolver = getResourceResolver();
-            String payloadPath = getPayload(item.getWorkflowData());
+            ResourceResolver resourceResolver = AEMUtil.getResourceResolver(resourceResolverFactory);
+            String payloadPath = AEMUtil.getPayload(item.getWorkflowData());
 
             // Get the content fragment
             ContentFragment contentFragment = getContentFragment(payloadPath, resourceResolver);
@@ -147,10 +147,9 @@ public class IndesignServiceImpl implements WorkflowProcess {
 
         String status = CommonUtil.lookupJson(statusCallResponse, "/events/0/state");
         log.debug("STATUS??? ?????? " + status);
-        if(status!=null && status.trim().length()==0) return true;
+        if (status != null && status.trim().length() == 0) return true;
         return (!status.equals("COMPLETED"));
     }
-
 
 
     private void initVariables(MetaDataMap args) {
@@ -222,7 +221,7 @@ public class IndesignServiceImpl implements WorkflowProcess {
 
         Root root = new Root();
         Params params = new Params();
-        ArrayList<com.showcase.core.beans.Asset> assets = new ArrayList<>();
+        ArrayList<com.showcase.core.beans.indesign.Asset> assets = new ArrayList<>();
         root.setAssets(assets);
         root.setParams(params);
 
@@ -247,7 +246,7 @@ public class IndesignServiceImpl implements WorkflowProcess {
             log.info("elementValue--1::" + elementValue);
 
             if (isDAMAsset(elementValue)) {
-                com.showcase.core.beans.Asset damAsset = makeSourceObject(resourceResolver, elementValue);
+                com.showcase.core.beans.indesign.Asset damAsset = makeSourceObject(resourceResolver, elementValue);
                 assets.add(damAsset);
                 header.add("\"@" + elementName + "\"");
                 valueRow.add("\"" + getAssetFileName(elementValue) + "\"");
@@ -272,7 +271,7 @@ public class IndesignServiceImpl implements WorkflowProcess {
         Source source = new Source();
         source.setUrl(csvFileURL);
         source.setType(HTTP_GET);
-        com.showcase.core.beans.Asset csvAsset = new com.showcase.core.beans.Asset();
+        com.showcase.core.beans.indesign.Asset csvAsset = new com.showcase.core.beans.indesign.Asset();
         csvAsset.setSource(source);
         csvAsset.setDestination(csvFileName);
         assets.add(csvAsset);
@@ -285,13 +284,13 @@ public class IndesignServiceImpl implements WorkflowProcess {
 
     }
 
-    private com.showcase.core.beans.Asset makeSourceObject(ResourceResolver resourceResolver, String binaryFile) {
+    private com.showcase.core.beans.indesign.Asset makeSourceObject(ResourceResolver resourceResolver, String binaryFile) {
         try {
             String blobUrl = prepareUploadBlob(resourceResolver, binaryFile);
             Source source = new Source();
             source.setUrl(blobUrl);
             source.setType(HTTP_GET);
-            com.showcase.core.beans.Asset messageAsset = new com.showcase.core.beans.Asset();
+            com.showcase.core.beans.indesign.Asset messageAsset = new com.showcase.core.beans.indesign.Asset();
             messageAsset.setSource(source);
             messageAsset.setDestination(getAssetFileName(binaryFile));
             return messageAsset;
@@ -422,21 +421,4 @@ public class IndesignServiceImpl implements WorkflowProcess {
         return Objects.requireNonNull(cfResource).adaptTo(ContentFragment.class);
     }
 
-    private String getPayload(WorkflowData workflowData) {
-        String path = "";
-        if ("JCR_PATH".equals(workflowData.getPayloadType())) {
-            path = (String) workflowData.getPayload();
-        } else {
-            path = (String) workflowData.getPayload();
-        }
-        log.info("*****Indesign payload path*****" + path);
-        return path;
-    }
-
-
-    private ResourceResolver getResourceResolver() throws LoginException {
-        Map<String, Object> param = new HashMap<>();
-        param.put(ResourceResolverFactory.SUBSERVICE, "content-svc-admin");
-        return resourceResolverFactory.getServiceResourceResolver(param);
-    }
 }

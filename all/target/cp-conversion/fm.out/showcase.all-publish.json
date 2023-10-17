@@ -1,0 +1,20 @@
+{
+  "id":"com.showcase:showcase.all:slingosgifeature:publish:1.0-SNAPSHOT",
+  "configurations":  {
+    "org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl":    {
+      "resource.resolver.mapping":[
+        "/content/showcase/</",
+        "/:/"
+      ],
+      ":configurator:content-package-origins":"com.showcase:showcase.all:1.0-SNAPSHOT|com.showcase:showcase.ui.config:1.0-SNAPSHOT"
+    }
+  },
+  "api-regions:JSON|false":[
+    {
+      "name":"global"
+    },
+    {
+      "name":"com.adobe.aem.deprecated"
+    }
+  ]
+}
