@@ -2,6 +2,8 @@ package com.showcase.core.beans.indesign;
 
 public class Source{
     private String type;
+    private String url;
+
 
     public String getUrl() {
         return url;
@@ -10,8 +12,6 @@ public class Source{
     public void setUrl(String url) {
         this.url = url;
     }
-
-    public String url;
 
     public String getType() {
         return type;

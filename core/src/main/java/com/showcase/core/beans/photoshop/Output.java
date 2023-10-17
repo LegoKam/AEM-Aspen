@@ -3,12 +3,12 @@ package com.showcase.core.beans.photoshop;
 import java.util.ArrayList;
 
 public class Output{
-    public String storage;
-    public String type;
-    public boolean overwrite;
-    public String href;
-    public boolean trimToCanvas;
-    public ArrayList<Layer> layers;
+    private String storage;
+    private String type;
+    private boolean overwrite;
+    private String href;
+    private boolean trimToCanvas;
+    private ArrayList<Layer> layers;
 
     public String getStorage() {
         return storage;

@@ -7,7 +7,7 @@ public class Rendition{
     private String storage;
     private String type;
     private boolean trimToCanvas;
-    public ArrayList<Layer> layers;
+    private ArrayList<Layer> layers;
 
 
     public String getHref() {

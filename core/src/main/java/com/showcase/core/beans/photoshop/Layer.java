@@ -1,12 +1,12 @@
 package com.showcase.core.beans.photoshop;
 
 public class Layer{
-    public String name;
-    public int index;
-    public Input input;
-    public Edit edit;
-    public SmartObject smartObject;
-    public Text text;
+    private String name;
+    private int index;
+    private Input input;
+    private Edit edit;
+    private SmartObject smartObject;
+    private Text text;
 
     public String getName() {
         return name;

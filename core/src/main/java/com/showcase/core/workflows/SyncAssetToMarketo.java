@@ -105,6 +105,7 @@ public class SyncAssetToMarketo implements WorkflowProcess {
 
     }
 
+    @SuppressWarnings("findsecbugs:PATH_TRAVERSAL_IN")
     private void assetSync(String accessToken, Asset asset) throws IOException {
         String call = marketoInstance
                 + "/rest/asset/v1/files.json?"
@@ -124,7 +125,7 @@ public class SyncAssetToMarketo implements WorkflowProcess {
         multipart.addFormField("description", Objects.requireNonNull(asset, "").getMetadataValue("dc:title"));
         multipart.addFormField("name", "AEM " + asset.getName());
         // Add file
-        multipart.addFilePart("file", new File(asset.getPath()), inputStream);
+        multipart.addFilePart("file", new File(asset.getPath()), Objects.requireNonNull(inputStream));
         // Print result
         String response = multipart.finish();
         logger.info("============Generate Asset Sync response============");

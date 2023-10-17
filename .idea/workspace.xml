@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b985b69-5635-46f6-a8b3-b9335ed142be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/exception/CustomException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/indesign/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/indesign/Source.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/photoshop/Layer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/photoshop/Layer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/photoshop/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/photoshop/Output.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/photoshop/SmartObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/photoshop/SmartObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/photoshop/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/photoshop/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/photoshop/output/Rendition.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/beans/photoshop/output/Rendition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/util/AEMUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/util/AEMUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/IndesignServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/IndesignServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/PSDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/PSDServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMarketo.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMarketo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,77 +99,77 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>87</line>
+          <line>86</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>88</line>
+          <line>87</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>89</line>
+          <line>88</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>95</line>
+          <line>94</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>119</line>
+          <line>118</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>153</line>
+          <line>152</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>160</line>
+          <line>159</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>175</line>
+          <line>174</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>182</line>
+          <line>181</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>185</line>
+          <line>184</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>186</line>
+          <line>185</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>91</line>
+          <line>90</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>112</line>
+          <line>111</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>114</line>
+          <line>113</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/core/src/main/java/com/showcase/core/workflows/SyncAssetToMagento.java</url>
-          <line>138</line>
+          <line>137</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

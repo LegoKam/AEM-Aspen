@@ -11,7 +11,6 @@ import com.google.gson.Gson;
 import com.showcase.core.beans.magento.Content;
 import com.showcase.core.beans.magento.Entry;
 import com.showcase.core.beans.magento.Root;
-import com.showcase.core.beans.photoshop.Input;
 import com.showcase.core.util.AEMUtil;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;

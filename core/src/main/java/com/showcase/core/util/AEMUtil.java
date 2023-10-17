@@ -73,7 +73,7 @@ public class AEMUtil {
             StringBuilder queryParamsBuilder = new StringBuilder("?");
             for (String parameter : paramArray) {
                 String[] paramkv = parameter.split("=");
-                queryParamsBuilder.append(paramkv[0]).append("=").append(URLEncoder.encode(paramkv[1], StandardCharsets.UTF_8));
+                queryParamsBuilder.append(paramkv[0]).append("=").append(URLEncoder.encode(paramkv[1], "UTF-8"));
             }
             queryParams = queryParamsBuilder.toString();
 

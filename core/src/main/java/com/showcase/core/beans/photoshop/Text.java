@@ -1,7 +1,7 @@
 package com.showcase.core.beans.photoshop;
 
 public class Text {
-    public String content;
+    private String content;
 
     public Text(String elementValue) {
         this.content = elementValue;
